@@ -4,12 +4,12 @@ const { Schema } = mongoose;
 
 const exampleSchema = new Schema({
   title: String,
-  decription: String,
-  price:Number,
-  dicount:Number,
-  rating:Number,
-  brand:String,
-  category:String,
+  description: String, // ✅ درست
+  price: Number,
+  dicount: Number,
+  rating: Number,
+  brand: String,
+  category: String,
 });
 
 const Example = mongoose.model("Example", exampleSchema);

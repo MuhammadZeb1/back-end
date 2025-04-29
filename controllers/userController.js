@@ -6,11 +6,7 @@ import  Example from "../model/example.js";
 // Create
 export const createUser = async (req, res) => {
     try {
-      const example = new Example();
-      example.title = 'ppppp';
-      example.price = 3242;
-      example.rating = 3242;
-  
+      const example = new Example(req.body);  
       const savedUser = await example.save();
       res.status(201).json(savedUser);
     } catch (err) {
