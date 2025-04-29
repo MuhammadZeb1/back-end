@@ -1,5 +1,5 @@
 import express from 'express';
-// import userRoutes from './routes/userRoute.js';
+import userRoutes from './routes/userRoute.js';
 import first from './routes/first.js';
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
@@ -37,7 +37,7 @@ connectDB();
 //   });
 
 app.use(express.json());
-// app.use('/api', userRoutes);
+app.use('/api', userRoutes);
 app.use('/', first);
 
 app.listen(PORT, () => {

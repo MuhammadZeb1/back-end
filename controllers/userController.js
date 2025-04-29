@@ -1,28 +1,43 @@
-// import { Example,  } from "../modle/example.js";
+import  Example from "../model/example.js";
+// const Users = Example.Example
 
+// console.log(Users);
 
-// // Create
-// export const createUser = (req, res) => {
-//   const example = new Example()
-//   example.name = "ali"
-//   res.status(201).json(user);
-// };
+// Create
+export const createUser = async (req, res) => {
+    try {
+      const example = new Example();
+      example.title = 'ppppp';
+      example.price = 3242;
+      example.rating = 3242;
+  
+      const savedUser = await example.save();
+      res.status(201).json(savedUser);
+    } catch (err) {
+      res.status(400).json({ message: err.message });
+    }
+  };
+  
 
-// // Read all
-// export const getUsers = (req, res) => {
-// //   res.json(users);
-// };
+// Read all
+export const getUsers = (req, res) => {
+  res.send("")
+};
 
-// // Read one
-// export const getUser = (req, res) => {
+// Read one
+export const getUser = (req, res) => {
+    res.send("")
 
-// };
+};
 
-// // Update
-// export const updateUser = (req, res) => {
-// };
+// Update
+export const updateUser = (req, res) => {
+  res.send("")
 
-// // Delete
-// export const deleteUser = (req, res) => {
+};
+
+// Delete
+export const deleteUser = (req, res) => {
+    res.send("")
  
-// };
+};

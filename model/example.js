@@ -12,4 +12,6 @@ const exampleSchema = new Schema({
   category:String,
 });
 
-export const Example = mongoose.model("Example", exampleSchema);
+const Example = mongoose.model("Example", exampleSchema);
+export default Example;
+
