@@ -1,39 +1,28 @@
-let users = [];
-let idCounter = 1;
+// import { Example,  } from "../modle/example.js";
 
-// Create
-export const createUser = (req, res) => {
-  const user = { id: idCounter++, ...req.body };
-  users.push(user);
-  res.status(201).json(user);
-};
 
-// Read all
-export const getUsers = (req, res) => {
-  res.json(users);
-};
+// // Create
+// export const createUser = (req, res) => {
+//   const example = new Example()
+//   example.name = "ali"
+//   res.status(201).json(user);
+// };
 
-// Read one
-export const getUser = (req, res) => {
-  const user = users.find(u => u.id == req.params.id);
-  if (!user) return res.status(404).json({ message: 'User not found' });
-  res.json(user);
-};
+// // Read all
+// export const getUsers = (req, res) => {
+// //   res.json(users);
+// };
 
-// Update
-export const updateUser = (req, res) => {
-  const user = users.find(u => u.id == req.params.id);
-  if (!user) return res.status(404).json({ message: 'User not found' });
+// // Read one
+// export const getUser = (req, res) => {
 
-  Object.assign(user, req.body);
-  res.json(user);
-};
+// };
 
-// Delete
-export const deleteUser = (req, res) => {
-  const index = users.findIndex(u => u.id == req.params.id);
-  if (index === -1) return res.status(404).json({ message: 'User not found' });
+// // Update
+// export const updateUser = (req, res) => {
+// };
 
-  users.splice(index, 1);
-  res.json({ message: 'User deleted' });
-};
+// // Delete
+// export const deleteUser = (req, res) => {
+ 
+// };
