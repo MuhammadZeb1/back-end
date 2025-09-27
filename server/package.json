@@ -2,7 +2,7 @@
   "name": "crud-es6-memory",
   "version": "1.0.0",
   "main": "app.js",
-  "type": "module",
+  "type": "common js",
   "scripts": {
     "dev": "nodemon app.js",
     "start": "node app.js"
