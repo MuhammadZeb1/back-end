@@ -2,16 +2,16 @@
 const os = require("os");
 
 // os.type(): Returns the operating system name
-console.log("os.type():", os.type()); // Example: 'Linux', 'Darwin', 'Windows_NT'
+// console.log("os.type():", os.type()); // Example: 'Linux', 'Darwin', 'Windows_NT'
 
 // os.platform(): Returns the OS platform
-console.log("os.platform():", os.platform()); // Example: 'win32', 'linux', 'darwin'
+// console.log("os.platform():", os.platform()); // Example: 'win32', 'linux', 'darwin'
 
 // os.arch(): Returns the CPU architecture
-console.log("os.arch():", os.arch()); // Example: 'x64', 'arm'
+// console.log("os.arch():", os.arch()); // Example: 'x64', 'arm'
 
 // os.cpus(): Returns details about each CPU core
-console.log("os.cpus():", os.cpus()); // Example: array of CPU objects
+// console.log("os.cpus():", os.cpus()); // Example: array of CPU objects
 
 // os.totalmem(): Returns total system memory in bytes
 console.log("os.totalmem():", os.totalmem()); // Example: 17179869184
