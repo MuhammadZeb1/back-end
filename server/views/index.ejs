@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1> i an ejs</h1>
+    <h1><%- message %></h1>
+
+    <ul id="skills-list">
+        <!-- Skills will appear here one by one -->
+    </ul>
+
+    <button id="show-skill-btn">Show Next Skill</button>
+
+    <script>
+        // Get skills array from EJS
+        const skills = <%- JSON.stringify(skills) %>;
+        let index = 0;
+
+        const ul = document.getElementById('skills-list');
+        const btn = document.getElementById('show-skill-btn');
+
+        btn.addEventListener('click', () => {
+            if(index < skills.length) {
+                const li = document.createElement('li');
+                li.textContent = skills[index];
+                ul.appendChild(li);
+                index++;
+            } else {
+                alert('All skills are displayed!');
+            }
+        });
+    </script>
 </body>
 </html>
