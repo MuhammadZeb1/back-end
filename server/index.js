@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 // Dynamic route with id and slug
 // app.get("/:id-:slug", (req, res) => {
 //     res.send(`Hello from Express! ID: ${req.params.id}, Slug: ${req.params.slug}`);

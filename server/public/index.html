@@ -6,6 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello</h1>
+    <h1 id="text">hello</h1>
+    <button onclick="khan()">change</button>
+
+    <script>
+        let inc = 0;
+        const arr = [1,2,3,4,5];
+        
+        const khan = () => {
+            if (inc < arr.length) {
+                document.getElementById("text").innerText = arr[inc];
+                inc++;
+            } else {
+                inc = 0; // دوبارہ شروع کرنے کے لیے
+            }
+        }
+    </script>
 </body>
 </html>
